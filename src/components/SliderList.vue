@@ -1,7 +1,7 @@
 <!-- TEMPLATE -->
 <template>
 
-  <form>
+  <form class="sliders-wrapper">
     <RangeSlider/>
     <RangeSlider/>
     <RangeSlider/>
@@ -10,7 +10,7 @@
 </template>
 
 <!-- SCRIPT -->
-<script type="text/javascript" src="@/scripts/rangeSlider.js"></script>
+<script type="text/javascript" src="@/scripts/sliderList.js"></script>
 
 <!-- STYLE -->
-<style src="@/styles/css/range-slider.css"></style>
+<style src="@/styles/css/slider-list.css"></style>

@@ -3,5 +3,36 @@
 }
 
 .slider {
-  width: 100%;
+  -webkit-appearance: none;  /* Override default CSS styles */
+  appearance: none;
+  width: 100%; /* Full-width */
+  height: 15px; /* Specified height */
+  background: #f5eee2; /* Grey background */
+  outline: none; /* Remove outline */
+  opacity: 0.7; /* Set transparency (for mouse-over effects on hover) */
+  -webkit-transition: .2s; /* 0.2 seconds transition on hover */
+  transition: opacity .2s;
+  border-radius: 1rem;
+}
+
+.slider:hover {
+  opacity: 1; /* Fully shown on mouse-over */
+}
+
+.slider::-webkit-slider-thumb {
+  -webkit-appearance: none; /* Override default look */
+  appearance: none;
+  width: 20px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background: #e9ad45; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 1rem;
+}
+
+.slider::-moz-range-thumb {
+  width: 20px; /* Set a specific slider handle width */
+  height: 40px; /* Slider handle height */
+  background: #e9ad45; /* Green background */
+  cursor: pointer; /* Cursor on hover */
+  border-radius: 1rem;
 }
