@@ -9,7 +9,7 @@
   appearance: none;
   width: 100%; 
   height: 12px; 
-  background: #f5eee2; 
+  background: #e8ecee; 
   outline: none; 
   opacity: 0.7; 
   -webkit-transition: .2s; 
@@ -26,34 +26,34 @@
   appearance: none;
   width: 15px; 
   height: 35px; 
-  background: #6b490d; 
+  background: #175977; 
   cursor: pointer; 
   border-radius: 1rem;
-  box-shadow: -1000px 0 0 1000px #e9ad45;
+  box-shadow: -1000px 0 0 1000px #80b4ce;
 }
 
 /* FIREFOX */
 .slider::-moz-range-thumb {
   width: 20px;
   height: 40px;
-  background: #e9ad45; 
+  background: #175977; 
   cursor: pointer;
   border-radius: 1rem;
 }
 
 .slider::-moz-range-progress {
-  background-color: #e9ad45; 
+  background-color: #80b4ce; 
 }
 
 .slider::-moz-range-track {  
-  background-color: #f5eee2;
+  background-color: #e8ecee;
 }
 
 /* IE */
 .slider::-ms-fill-lower {
-  background-color: #e9ad45; 
+  background-color: #80b4ce; 
 }
 
 .slider::-ms-fill-upper {  
-  background-color: #f5eee2;
+  background-color: #e8ecee;
 }

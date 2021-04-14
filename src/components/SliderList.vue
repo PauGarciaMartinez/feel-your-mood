@@ -7,6 +7,8 @@
     <RangeSlider/>
   </form>
 
+  <button type="submit" class="main-btn">Find recommendations</button>
+
 </template>
 
 <!-- SCRIPT -->

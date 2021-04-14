@@ -8,3 +8,21 @@
   margin: 0 auto;
   margin-top: 5rem;
 }
+
+.main-btn {
+  font-size: 1rem;
+  font-weight: 600;
+  color: white;
+  padding: 1rem;
+  border: 0px solid #175977;
+  border-radius: 0.3rem;
+  background-color: #175977;
+  margin-top: 5rem;
+  transition: 0.2s;
+}
+
+.main-btn:hover {
+  background-color: #397da0;
+  cursor: pointer;
+  transition: 0.2s;
+}
