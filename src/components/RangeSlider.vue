@@ -5,16 +5,16 @@
     <label for="mood">
       <slot></slot>
     </label>
-    <span id="bubble" class="bubble">{{ bubble }}</span>
     <input 
       type="range" 
       id="mood" 
       name="mood" 
       min="0" 
       max="100" 
-      class="slider"
+      class="slider" 
       @input="updateBubble"
       v-model="value">
+    <span id="bubble" class="bubble">{{ bubble }}</span>
   </div>
 
 </template>
