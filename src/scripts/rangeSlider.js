@@ -1,16 +1,17 @@
 export default {
   data() {
     return {
-
+      bubble: 50,
+      value: 50
     }
   },
-  mounted() {
-    const range = document.getElementById('mood');
-    const bubble = document.getElementById('bubble');
-    
-    range.addEventListener('input', e => {
-      bubble.innerHTML = range.value;
-    });
+  methods: {
+    updateBubble() {
+      this.bubble = this.value;
+    }
+  },
+/*   mounted() {
+
     
     function setBubble(range, bubble) {
       const val = range.value;
@@ -26,7 +27,7 @@ export default {
     range.addEventListener('input', e => {
       setBubble(range, bubble);
     });
-  }
+  } */
 }
 
 
