@@ -59,11 +59,24 @@
   background-color: #e8ecee;
 }
 
-/* BUBBLE */
+/* LEGEND */
+.legend {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+}
+
 .bubble {
   color: white;
   background-color: #175977;
   font-weight: 600;
   padding: 0.5rem;
   border-radius: 0.3rem;
+}
+
+.fa-frown,
+.fa-smile-beam {
+  font-size: 2rem;
+  color: #175977;
 }

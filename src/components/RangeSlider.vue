@@ -14,7 +14,11 @@
       class="slider" 
       @input="updateBubble"
       v-model="value">
-    <span id="bubble" class="bubble">{{ bubble }}</span>
+      <div class="legend">
+        <i class="far fa-frown"></i>
+        <span id="bubble" class="bubble">{{ bubble }}</span>
+        <i class="far fa-smile-beam"></i>
+      </div>
   </div>
 
 </template>
