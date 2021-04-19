@@ -1,7 +1,7 @@
 <!-- TEMPLATE -->
 <template>
 
-  <form @submit="sumItUp" class="sliders-wrapper">
+  <form class="sliders-wrapper">
     <RangeSlider @updateValue="value1 = $event">
       <p>{{ q1 }}</p>
     </RangeSlider>
@@ -15,7 +15,7 @@
     </RangeSlider>
   </form>
 
-  <button type="submit" class="main-btn">Find recommendations</button>
+  <button type="submit" class="main-btn" @click="sumItUp">Find recommendations</button>
 
 </template>
 

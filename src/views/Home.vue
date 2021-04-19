@@ -1,7 +1,10 @@
 <!-- TEMPLATE -->
 <template>
   <h1 class="title">Feel your mood</h1>
-  <SliderForm/>
+  <SliderForm @totalValue="mood = $event" />
+  
+  <br>
+  {{ mood }}
 </template>
 
 <!-- SCRIPT -->

@@ -1,4 +1,5 @@
 export default {
+  emits: ['updateValue'],
   data() {
     return {
       bubble: 50,
