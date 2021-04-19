@@ -1,16 +1,16 @@
 <!-- TEMPLATE -->
 <template>
 
-  <form class="sliders-wrapper">
+  <form @submit="sumItUp" class="sliders-wrapper">
     <RangeSlider @updateValue="value1 = $event">
       <p>{{ q1 }}</p>
     </RangeSlider>
 
-    <RangeSlider>
+    <RangeSlider @updateValue="value2 = $event">
       <p>{{ q2 }}</p>
     </RangeSlider>
 
-    <RangeSlider>
+    <RangeSlider @updateValue="value3 = $event">
       <p>{{ q3 }}</p>
     </RangeSlider>
   </form>

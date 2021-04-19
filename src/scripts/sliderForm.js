@@ -6,7 +6,11 @@ export default {
     return {
       q1: 'So, how are you feeling today?',
       q2: 'Do you feel like hanging out with friends?',
-      q3: 'Overall, are you living a fulfilling life?'
+      q3: 'Overall, are you living a fulfilling life?',
+
+      value1: 50,
+      value2: 50,
+      value3: 50,
     }
   },
   components: {
