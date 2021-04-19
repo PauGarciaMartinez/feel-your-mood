@@ -2,7 +2,7 @@
 <template>
 
   <form class="sliders-wrapper">
-    <RangeSlider>
+    <RangeSlider @updateValue="value1 = $event">
       <p>{{ q1 }}</p>
     </RangeSlider>
 
@@ -20,7 +20,7 @@
 </template>
 
 <!-- SCRIPT -->
-<script type="text/javascript" src="@/scripts/sliderList.js"></script>
+<script type="text/javascript" src="@/scripts/sliderForm.js"></script>
 
 <!-- STYLE -->
-<style src="@/styles/css/slider-list.css"></style>
+<style src="@/styles/css/slider-form.css"></style>

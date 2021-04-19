@@ -8,6 +8,7 @@ export default {
   methods: {
     updateBubble() {
       this.bubble = this.value;
+      this.$emit('updateValue', this.value);
     }
   }
 }

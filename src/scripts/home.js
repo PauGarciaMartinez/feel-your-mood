@@ -1,8 +1,8 @@
-import SliderList from "@/components/SliderList"
+import SliderForm from "@/components/SliderForm"
 
 export default {
   name: 'Home',
   components: {
-    SliderList
+    SliderForm
   }
 }
