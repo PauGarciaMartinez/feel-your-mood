@@ -1,6 +1,8 @@
 <!-- TEMPLATE -->
 <template>
-  <h1 class="title">Hey</h1>
+  <h2>Hey</h2>
+
+  {{ moodValue }}
 
 </template>
 
