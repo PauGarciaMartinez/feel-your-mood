@@ -1,4 +1,5 @@
-import SliderForm from "@/components/SliderForm"
+import SliderForm from "@/components/SliderForm";
+import Recommendation from "@/components/Recommendation";
 
 export default {
   name: 'Home',
@@ -8,6 +9,7 @@ export default {
     }
   },
   components: {
-    SliderForm
+    SliderForm,
+    Recommendation
   }
 }
