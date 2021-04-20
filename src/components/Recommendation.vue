@@ -8,8 +8,6 @@
   <h3 v-else-if="moodValue > 200 && moodValue <= 250">Ouuu yeah! Let's eat the world today!</h3>
   <h3 v-else-if="moodValue > 250 && moodValue <= 300">You're overpowered!!! Ecstasy ON!</h3>
 
-  {{ result }}
-
 </template>
 
 <!-- SCRIPT -->
