@@ -1,8 +1,14 @@
 <!-- TEMPLATE -->
 <template>
   <h1 class="title">Feel your mood</h1>
-  <SliderForm @totalValue="mood = $event" />
-  <Recommendation :moodValue="mood" />
+  <SliderForm 
+    @totalValue="mood = $event" 
+    @result="result = $event" 
+  />
+  <Recommendation 
+    :moodValue="mood"
+    :result="result" 
+  />
 </template>
 
 <!-- SCRIPT -->

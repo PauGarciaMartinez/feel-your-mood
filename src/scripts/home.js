@@ -5,7 +5,8 @@ export default {
   name: 'Home',
   data() {
     return {
-      mood: null
+      mood: null,
+      result: null
     }
   },
   components: {

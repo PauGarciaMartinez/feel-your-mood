@@ -2,7 +2,7 @@ import RangeSlider from "@/components/RangeSlider"
 
 export default {
   name: 'SliderList',
-  emits: ['totalValue'],
+  emits: ['totalValue', 'result'],
   data() {
     return {
       q1: 'So, how are you feeling today?',
@@ -44,6 +44,8 @@ export default {
 
         this.result = await response.json();
         this.responseAvailable = true;
+
+        this.$emit('result', this.result);
 
       } catch(e) {
         console.log(e)

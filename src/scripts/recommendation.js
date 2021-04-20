@@ -1,6 +1,6 @@
 export default {
   name: 'Recommendation',
-  props: ['moodValue'],
+  props: ['moodValue', 'result'],
   data() {
     return {
 

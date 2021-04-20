@@ -15,9 +15,12 @@
     </RangeSlider>
   </form>
 
-  <button type="submit" class="main-btn" @click="sumItUp(), fetchAPIData()">Find recommendations</button>
-
-  {{ result }}
+  <button 
+    type="submit" 
+    class="main-btn" 
+    @click="sumItUp(), fetchAPIData()">
+    Find recommendations
+  </button>
 
 </template>
 
