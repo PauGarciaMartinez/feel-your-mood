@@ -1,4 +1,5 @@
-import RangeSlider from "@/components/RangeSlider"
+import RangeSlider from "@/components/RangeSlider";
+import APIKeys from "@/keys.js";
 
 export default {
   name: 'SliderList',
@@ -13,8 +14,6 @@ export default {
 
       totalValue: null,
       result: '',
-      responseAvailable: false,
-      apiKey: '426aef7e46msh1efabc60fe00542p157833jsn436bd09d04b2'
     }
   },
   methods: {
@@ -44,7 +43,7 @@ export default {
         let response = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-similar-movies&imdb=${randomGenre}&page=1`, {
           "method": "GET",
           "headers": {
-            "x-rapidapi-key": this.apiKey,
+            "x-rapidapi-key": this.imdbAPIKey,
             "x-rapidapi-host": "movies-tvshows-data-imdb.p.rapidapi.com"
           }
         })
