@@ -1,5 +1,4 @@
 import RangeSlider from "@/components/RangeSlider";
-import APIKeys from "@/keys.js";
 
 export default {
   name: 'SliderList',
@@ -52,7 +51,11 @@ export default {
           throw new Error(`HHTP error! status: ${response.status}`);
         }
 
-        this.result = await response.json();
+        let allResults = await response.json();
+        let allIds = allResults.movie_results.map(movie => movie.imdb_id);
+        let similarPick = allIds[Math.floor(Math.random() * allIds.length)];
+        this.result = similarPick;
+
 
         this.$emit('result', this.result);
 
