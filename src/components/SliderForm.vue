@@ -1,17 +1,9 @@
 <!-- TEMPLATE -->
 <template>
 
-  <form class="sliders-wrapper">
-    <RangeSlider @updateValue="value1 = $event">
-      <p>{{ q1 }}</p>
-    </RangeSlider>
-
-    <RangeSlider @updateValue="value2 = $event">
-      <p>{{ q2 }}</p>
-    </RangeSlider>
-
-    <RangeSlider @updateValue="value3 = $event">
-      <p>{{ q3 }}</p>
+  <form class="sliders-wrapper" v-for="q in qs">
+    <RangeSlider @updateValue="q.value = $event">
+      <p>{{ q.question }}</p>
     </RangeSlider>
   </form>
 
