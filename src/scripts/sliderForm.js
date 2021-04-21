@@ -18,17 +18,13 @@ export default {
   },
   methods: {
     sumItUp() {
-      const totalValue = 
-      parseInt(this.value1) + 
-      parseInt(this.value2) + 
-      parseInt(this.value3);
-
+      const totalValue = this.qs.reduce((v, {value}) => v + parseInt(value), 0);
       this.$emit('totalValue', totalValue);
     },
     async fetchAPIData() {
       this.responseAvailable = false;
       try {
-        let response = await fetch("https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movies-by-title&title=ni", {
+        let response = await fetch("https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movies-by-title&title=a", {
           "method": "GET",
           "headers": {
             "x-rapidapi-key": this.apiKey,
