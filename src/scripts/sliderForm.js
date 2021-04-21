@@ -22,6 +22,7 @@ export default {
     },
     async fetchMovie() {
       let genre;
+
       if (this.totalValue <= 50) {
         genre = ['tt0034583', 'tt0112579', 'tt0102492', 'tt0120338'];
       } else if (this.totalValue > 50 && this.totalValue <= 100) {
@@ -55,6 +56,27 @@ export default {
         let allIds = allResults.movie_results.map(movie => movie.imdb_id);
         let similarPick = allIds[Math.floor(Math.random() * allIds.length)];
         this.result = similarPick;
+
+        try {
+          let moviePick = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movie-details&imdb=${similarPick}`, {
+            "method": "GET",
+            "headers": {
+              "x-rapidapi-key": this.imdbAPIKey,
+              "x-rapidapi-host": "movies-tvshows-data-imdb.p.rapidapi.com"
+            }
+          })
+
+          if (!moviePick.ok) {
+            throw new Error(`HHTP error! status: ${moviePick.status}`);
+          }
+
+          let movieDetails = await moviePick.json();
+          this.result = movieDetails;
+
+        } catch(e) {
+          console.log(e)
+        }
+          
 
 
         this.$emit('result', this.result);
