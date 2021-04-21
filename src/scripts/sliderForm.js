@@ -11,6 +11,7 @@ export default {
         { question: 'Overall, are you living a fulfilling life?', value: 50 }
       ],
 
+      totalValue: null,
       result: '',
       responseAvailable: false,
       apiKey: '426aef7e46msh1efabc60fe00542p157833jsn436bd09d04b2'
@@ -18,13 +19,29 @@ export default {
   },
   methods: {
     sumItUp() {
-      const totalValue = this.qs.reduce((v, {value}) => v + parseInt(value), 0);
-      this.$emit('totalValue', totalValue);
+      this.totalValue = this.qs.reduce((v, {value}) => v + parseInt(value), 0);
+      this.$emit('totalValue', this.totalValue);
     },
-    async fetchAPIData() {
-      this.responseAvailable = false;
+    async fetchMovie() {
+      let genre;
+      if (this.totalValue <= 50) {
+        genre = ['tt0034583', 'tt0112579', 'tt0102492', 'tt0120338'];
+      } else if (this.totalValue > 50 && this.totalValue <= 100) {
+        genre = [];
+      } else if (this.totalValue > 100 && this.totalValue <= 150) {
+        genre = [];
+      } else if (this.totalValue > 150 && this.totalValue <= 200) {
+        genre = [];
+      } else if (this.totalValue > 200 && this.totalValue <= 250) {
+        genre = [];
+      } else if (this.totalValue > 250 && this.totalValue <= 300) {
+        genre = [];
+      }
+        
+      const randomGenre = genre[Math.floor(Math.random() * genre.length)];
+     
       try {
-        let response = await fetch("https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movies-by-title&title=a", {
+        let response = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-similar-movies&imdb=${randomGenre}&page=1`, {
           "method": "GET",
           "headers": {
             "x-rapidapi-key": this.apiKey,
@@ -37,7 +54,6 @@ export default {
         }
 
         this.result = await response.json();
-        this.responseAvailable = true;
 
         this.$emit('result', this.result);
 

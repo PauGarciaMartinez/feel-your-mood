@@ -10,7 +10,7 @@
   <button 
     type="submit" 
     class="main-btn" 
-    @click="sumItUp(), fetchAPIData()">
+    @click="sumItUp(), fetchMovie()">
     Find recommendations
   </button>
 
