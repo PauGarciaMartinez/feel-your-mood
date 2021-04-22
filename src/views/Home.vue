@@ -1,11 +1,11 @@
 <!-- TEMPLATE -->
 <template>
   <h1 class="title">Feel your mood</h1>
-  <SliderForm 
+  <SliderForm v-if="!result.title"
     @totalValue="mood = $event" 
     @result="result = $event" 
   />
-  <Recommendation 
+  <Recommendation v-if="result.title"
     :moodValue="mood"
     :result="result" 
   />

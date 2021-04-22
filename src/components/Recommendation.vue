@@ -9,19 +9,25 @@
     <h3 v-else-if="moodValue > 200 && moodValue <= 250">{{ a5 }}</h3>
     <h3 v-else-if="moodValue > 250 && moodValue <= 300">{{ a6 }}</h3>
   </header>
-  
 
+  <p>{{ intro }}</p>
+  
   <section>
-    <article>
-      <h4>{{ result.title }}</h4>
-      <p>{{ result.year }}</p>
-      <p>{{ result.description }}</p>
-      <p>{{ result.rating }} </p>
-      <p>{{ result.poster }} </p>
+    <article class="movie-container">
+      <div>
+        <img class="movie-poster" :src="result.poster" alt="Movie poster">
+      </div>
+      <div>
+        <h4 class="movie-title">{{ result.title }}</h4>
+        <p class="movie-year">{{ result.year }}</p>
+        <p class="movie-description">{{ result.description }}</p>
+        <p class="movie-rating">{{ result.imdb_rating }} </p>
+      </div>
     </article>
   </section>
-  
 
+  <button class="main-btn">Change the mood</button>
+  
 </template>
 
 <!-- SCRIPT -->

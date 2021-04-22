@@ -9,6 +9,8 @@ export default {
       a4: "That's it, chillin' and vibin'... keep going!",
       a5: "Ouuu yeah! Let's eat the world today",
       a6: "You're overpowered!!! Ecstasy ON!",
+
+      intro: "It's time to embrace your feelings. According to your mood, we recommend you to watch this movie:" 
     }
   },
   methods: {
