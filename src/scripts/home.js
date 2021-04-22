@@ -6,7 +6,7 @@ export default {
   data() {
     return {
       mood: null,
-      result: null
+      result: {}
     }
   },
   components: {

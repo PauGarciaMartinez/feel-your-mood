@@ -1,14 +1,26 @@
 <!-- TEMPLATE -->
 <template>
 
-  <h3 v-if="moodValue <= 50">Hey... things are gonna be fine!</h3>
-  <h3 v-else-if="moodValue > 50 && moodValue <= 100">C'mon, it's not a great day... but you're alright!</h3>
-  <h3 v-else-if="moodValue > 100 && moodValue <= 150">Well... that's pretty good, actually</h3>
-  <h3 v-else-if="moodValue > 150 && moodValue <= 200">Well... that's pretty good, actually</h3>
-  <h3 v-else-if="moodValue > 200 && moodValue <= 250">Ouuu yeah! Let's eat the world today!</h3>
-  <h3 v-else-if="moodValue > 250 && moodValue <= 300">You're overpowered!!! Ecstasy ON!</h3>
+  <header>
+    <h3 v-if="moodValue <= 50">{{ a1 }}</h3>
+    <h3 v-else-if="moodValue > 50 && moodValue <= 100">{{ a2 }}</h3>
+    <h3 v-else-if="moodValue > 100 && moodValue <= 150">{{ a3 }}</h3>
+    <h3 v-else-if="moodValue > 150 && moodValue <= 200">{{ a4 }}</h3>
+    <h3 v-else-if="moodValue > 200 && moodValue <= 250">{{ a5 }}</h3>
+    <h3 v-else-if="moodValue > 250 && moodValue <= 300">{{ a6 }}</h3>
+  </header>
+  
 
-  {{ result }}
+  <section>
+    <article>
+      <h4>{{ result.title }}</h4>
+      <p>{{ result.year }}</p>
+      <p>{{ result.description }}</p>
+      <p>{{ result.rating }} </p>
+      <p>{{ result.poster }} </p>
+    </article>
+  </section>
+  
 
 </template>
 
