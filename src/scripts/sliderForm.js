@@ -73,8 +73,29 @@ export default {
           this.resultDetails = movieDetails;
 
         } catch(e) {
-          console.log(e)
+          console.log(e);
         }
+
+        try {
+          let imagePick = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movies-images-by-imdb&imdb=${similarPick}`, {
+            "method": "GET",
+            "headers": {
+              "x-rapidapi-key": process.env.VUE_APP_IMDB_API_KEY,
+              "x-rapidapi-host": "movies-tvshows-data-imdb.p.rapidapi.com"
+            }
+          })
+
+          if (!imagePick.ok) {
+            throw new Error(`HHTP error! status: ${moviePick.status}`);
+          }
+
+          let movieImage = await imagePick.json();
+          this.resultDetails.poster = movieImage.poster;
+
+        } catch(e) {
+          console.log(e);
+        }
+
       } catch(e) {
         console.log(e)
       }
