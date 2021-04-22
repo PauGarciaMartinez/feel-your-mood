@@ -12,7 +12,7 @@ export default {
       ],
 
       totalValue: null,
-      result: '',
+      resultDetails: '',
     }
   },
   methods: {
@@ -55,13 +55,12 @@ export default {
         let allResults = await response.json();
         let allIds = allResults.movie_results.map(movie => movie.imdb_id);
         let similarPick = allIds[Math.floor(Math.random() * allIds.length)];
-        this.result = similarPick;
 
-        /* try {
+        try {
           let moviePick = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movie-details&imdb=${similarPick}`, {
             "method": "GET",
             "headers": {
-              "x-rapidapi-key": this.imdbAPIKey,
+              "x-rapidapi-key": process.env.VUE_APP_IMDB_API_KEY,
               "x-rapidapi-host": "movies-tvshows-data-imdb.p.rapidapi.com"
             }
           })
@@ -71,19 +70,16 @@ export default {
           }
 
           let movieDetails = await moviePick.json();
-          this.result = movieDetails;
+          this.resultDetails = movieDetails;
 
         } catch(e) {
           console.log(e)
-        } */
-          
-
-
-        this.$emit('result', this.result);
-
+        }
       } catch(e) {
         console.log(e)
       }
+
+      this.$emit('result', this.resultDetails);
     }
   },
   components: {
