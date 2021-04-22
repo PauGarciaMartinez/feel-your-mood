@@ -43,7 +43,7 @@ export default {
         let response = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-similar-movies&imdb=${randomGenre}&page=1`, {
           "method": "GET",
           "headers": {
-            "x-rapidapi-key": this.imdbAPIKey,
+            "x-rapidapi-key": process.env.VUE_APP_IMDB_API_KEY,
             "x-rapidapi-host": "movies-tvshows-data-imdb.p.rapidapi.com"
           }
         })
@@ -57,7 +57,7 @@ export default {
         let similarPick = allIds[Math.floor(Math.random() * allIds.length)];
         this.result = similarPick;
 
-        try {
+        /* try {
           let moviePick = await fetch(`https://movies-tvshows-data-imdb.p.rapidapi.com/?type=get-movie-details&imdb=${similarPick}`, {
             "method": "GET",
             "headers": {
@@ -75,7 +75,7 @@ export default {
 
         } catch(e) {
           console.log(e)
-        }
+        } */
           
 
 
