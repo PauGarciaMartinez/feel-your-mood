@@ -1,3 +1,7 @@
+.sentences {
+  margin-top: 3rem;
+}
+
 .movie-container {
   display: flex;
   flex-direction: row;
@@ -29,7 +33,7 @@
 .movie-rating {
   font-size: 1.3rem;
   color: white;
-  background-color: #175977;
+  background-color: #175977ad;
   padding: 0.7rem 0.5rem;
   border: 0px solid black;
   border-radius: 0.5rem;
@@ -37,6 +41,10 @@
   width: 50px;
   margin: 0 auto;
   margin-top: 1.5rem;
+}
+
+.back-btn {
+  margin-top: 3rem;
 }
 
 @media only screen and (max-width: 1400px) {

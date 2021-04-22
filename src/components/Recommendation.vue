@@ -1,7 +1,7 @@
 <!-- TEMPLATE -->
 <template>
 
-  <header>
+  <header class="sentences">
     <h3 v-if="moodValue <= 50">{{ a1 }}</h3>
     <h3 v-else-if="moodValue > 50 && moodValue <= 100">{{ a2 }}</h3>
     <h3 v-else-if="moodValue > 100 && moodValue <= 150">{{ a3 }}</h3>
@@ -26,7 +26,7 @@
     </article>
   </section>
 
-  <button class="main-btn">Change the mood</button>
+  <button class="main-btn back-btn">Change the mood</button>
   
 </template>
 
