@@ -20,7 +20,7 @@
       <div>
         <h4 class="movie-title">{{ result.title }}</h4>
         <p class="movie-year">{{ result.year }}</p>
-        <p class="movie-description">{{ result.description }}</p>
+        <p> {{ result.description }}</p>
         <p class="movie-rating">{{ result.imdb_rating }} </p>
       </div>
     </article>
