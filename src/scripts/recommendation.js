@@ -14,6 +14,8 @@ export default {
     }
   },
   methods: {
-
+    goBack() {
+      this.result.title = "";
+    }
   }
 }

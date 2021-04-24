@@ -26,7 +26,7 @@
     </article>
   </section>
 
-  <button class="main-btn back-btn">Change the mood</button>
+  <button class="main-btn back-btn" @click="goBack">Change the mood</button>
   
 </template>
 
