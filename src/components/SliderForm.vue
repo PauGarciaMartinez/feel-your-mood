@@ -1,7 +1,7 @@
 <!-- TEMPLATE -->
 <template>
 
-  <form class="sliders-wrapper" v-for="q in qs">
+  <form class="sliders-wrapper" v-for="q in qs" :key="q">
     <RangeSlider @updateValue="q.value = $event">
       <p>{{ q.question }}</p>
     </RangeSlider>
