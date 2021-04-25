@@ -1,6 +1,7 @@
 /* CHROME */
 .slider-container {
   width: 100%;
+  max-width: 565px;
   margin-bottom: -4rem;
 }
 

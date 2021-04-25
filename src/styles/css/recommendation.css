@@ -1,5 +1,11 @@
 .sentences {
-  margin-top: 3rem;
+  margin-top: 4rem;
+}
+
+.intro {
+  width: 70%;
+  margin: 0 auto;
+  margin-bottom: 2rem;
 }
 
 .movie-container {
@@ -18,7 +24,7 @@
 }
 
 .movie-poster {
-  height: 500px;
+  height: 300px;
 }
 
 .movie-title {

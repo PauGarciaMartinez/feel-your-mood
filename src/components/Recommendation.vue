@@ -10,7 +10,7 @@
     <h3 v-else-if="moodValue > 250 && moodValue <= 300">{{ a6 }}</h3>
   </header>
 
-  <p>{{ intro }}</p>
+  <p class="intro">{{ intro }}</p>
   
   <section>
     <article class="movie-container">
