@@ -38,10 +38,12 @@
 
 .movie-genres{
   display: flex;
+  flex-wrap: wrap;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   gap: 1rem;
+  line-height: 0;
   font-weight: 600;
   color: #175977;
 }
