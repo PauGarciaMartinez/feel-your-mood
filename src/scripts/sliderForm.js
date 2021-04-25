@@ -26,15 +26,15 @@ export default {
       if (this.totalValue <= 50) {
         genre = ['tt0034583', 'tt0112579', 'tt0102492', 'tt0120338'];
       } else if (this.totalValue > 50 && this.totalValue <= 100) {
-        genre = [];
+        genre = ['tt0062622', 'tt0102926', 'tt0405159', 'tt0049730'];
       } else if (this.totalValue > 100 && this.totalValue <= 150) {
-        genre = [];
+        genre = ['tt0114709', 'tt0109830', 'tt0107290', 'tt2278388'];
       } else if (this.totalValue > 150 && this.totalValue <= 200) {
-        genre = [];
+        genre = ['tt0075686', 'tt2194499', 'tt1022603', 'tt0098635'];
       } else if (this.totalValue > 200 && this.totalValue <= 250) {
-        genre = [];
+        genre = ['tt0119164', 'tt2937696', 'tt0120382', 'tt0118715'];
       } else if (this.totalValue > 250 && this.totalValue <= 300) {
-        genre = [];
+        genre = ['tt0071853', 'tt0080339', 'tt0109686', 'tt0119038'];
       }
         
       const randomGenre = genre[Math.floor(Math.random() * genre.length)];
