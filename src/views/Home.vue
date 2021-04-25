@@ -1,16 +1,21 @@
 <!-- TEMPLATE -->
 <template>
+
   <h1 class="title">Feel your mood</h1>
   
-  <SliderForm v-if="!result.title"
-    @totalValue="mood = $event" 
-    @result="result = $event" 
-  />
+  <transition name="fade" mode="out-in">
+    <SliderForm v-if="!result.title"
+      @totalValue="mood = $event" 
+      @result="result = $event" 
+    />
+  </transition>
   
-  <Recommendation v-if="result.title"
-    :moodValue="mood"
-    :result="result" 
-  />
+  <transition name="fade" mode="out-in">
+    <Recommendation v-if="result.title"
+      :moodValue="mood"
+      :result="result" 
+    />
+  </transition>
 
 </template>
 
