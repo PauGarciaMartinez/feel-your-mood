@@ -21,7 +21,9 @@
         <h4 class="movie-title">{{ result.title }}</h4>
         <p class="movie-year">{{ result.year }}</p>
         <p> {{ result.description }}</p>
-        <p class="movie-rating">{{ result.imdb_rating }} </p>
+        <div class="movie-genres">
+          <p v-for="genre in result.genres" :key="genre">{{ genre }}</p>
+        </div>
       </div>
     </article>
   </section>

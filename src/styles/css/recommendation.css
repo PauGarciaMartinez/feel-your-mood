@@ -24,7 +24,7 @@
 }
 
 .movie-poster {
-  height: 300px;
+  height: 400px;
 }
 
 .movie-title {
@@ -36,17 +36,14 @@
   font-size: 1.5rem;
 }
 
-.movie-rating {
-  font-size: 1.3rem;
-  color: white;
-  background-color: #175977ad;
-  padding: 0.7rem 0.5rem;
-  border: 0px solid black;
-  border-radius: 0.5rem;
-  box-shadow: 5px 5px 10px rgb(214, 214, 214);
-  width: 50px;
-  margin: 0 auto;
-  margin-top: 1.5rem;
+.movie-genres{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  font-weight: 600;
+  color: #175977;
 }
 
 .back-btn {
