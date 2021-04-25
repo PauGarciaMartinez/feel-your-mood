@@ -1,6 +1,7 @@
 /* CHROME */
 .slider-container {
   width: 100%;
+  margin-bottom: -4rem;
 }
 
 .slider {
@@ -15,7 +16,7 @@
   -webkit-transition: .2s; 
   transition: opacity .2s;
   border-radius: 1rem; 
-  margin-bottom: 2rem;
+  margin-bottom: 1rem;
 }
 
 .slider:hover {

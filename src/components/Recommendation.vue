@@ -28,8 +28,6 @@
 
   <button class="main-btn back-btn" @click="goBack">Change the mood</button>
   
-  <button class="main-btn back-btn" @click="fetchMovie">Another one</button>
-  
 </template>
 
 <!-- SCRIPT -->
