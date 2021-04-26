@@ -4,10 +4,15 @@
   <h1 class="title">Feel your mood</h1>
   
   <transition name="fade" mode="out-in">
-    <SliderForm v-if="!result.title"
+    <SliderForm v-if="!load && !result.title"
       @totalValue="mood = $event" 
-      @result="result = $event" 
+      @result="result = $event"
+      @load="load = $event" 
     />
+  </transition>
+
+  <transition name="fade" mode="out-in">
+    <Loader v-if="load && !result.title" />
   </transition>
   
   <transition name="fade" mode="out-in">

@@ -2,7 +2,7 @@ import RangeSlider from "@/components/RangeSlider";
 
 export default {
   name: 'SliderList',
-  emits: ['totalValue', 'result'],
+  emits: ['totalValue', 'result', 'load'],
   data() {
     return {
       qs: [
@@ -13,12 +13,16 @@ export default {
 
       totalValue: null,
       resultDetails: '',
+      show: true
     }
   },
   methods: {
     sumItUp() {
       this.totalValue = this.qs.reduce((v, {value}) => v + parseInt(value), 0);
       this.$emit('totalValue', this.totalValue);
+    },
+    showLoader() {
+      this.$emit('load', this.show);
     },
     async fetchMovie() {
       let genre;
