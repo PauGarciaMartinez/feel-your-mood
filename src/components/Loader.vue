@@ -1,7 +1,7 @@
 <!-- TEMPLATE -->
 <template>
 
-  <p>Loading...</p>
+  <p class="loading">Loading...</p>
 
 </template>
 

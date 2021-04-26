@@ -16,6 +16,7 @@ export default {
   methods: {
     goBack() {
       this.result.title = "";
+      this.$emit('load', false);
     }
   }
 }

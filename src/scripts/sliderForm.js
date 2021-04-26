@@ -13,7 +13,6 @@ export default {
 
       totalValue: null,
       resultDetails: '',
-      show: true
     }
   },
   methods: {
@@ -22,7 +21,7 @@ export default {
       this.$emit('totalValue', this.totalValue);
     },
     showLoader() {
-      this.$emit('load', this.show);
+      this.$emit('load', true);
     },
     async fetchMovie() {
       let genre;

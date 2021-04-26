@@ -18,7 +18,8 @@
   <transition name="fade" mode="out-in">
     <Recommendation v-if="result.title"
       :moodValue="mood"
-      :result="result" 
+      :result="result"
+      @load="load = $event" 
     />
   </transition>
 
